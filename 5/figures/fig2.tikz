@@ -1,0 +1,47 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-5, 0) {};
+		\node [style=none] (1) at (0, 0) {};
+		\node [style=none] (2) at (5, 0) {};
+		\node [style=none] (3) at (2.5, 2.5) {};
+		\node [style=none] (4) at (-2.5, -2.5) {};
+		\node [style=none] (5) at (0, 5) {};
+		\node [style=none] (6) at (0, -5) {};
+		\node [style=none] (7) at (-0.5, 0.5) {$O$};
+		\node [style=none] (8) at (-3, 0) {};
+		\node [style=none] (9) at (3, 0) {};
+		\node [style=none] (10) at (-1.5, -1.5) {};
+		\node [style=none] (11) at (1.5, 1.5) {};
+		\node [style=none] (12) at (0, -3) {};
+		\node [style=none] (13) at (5.5, 0) {$x$};
+		\node [style=none] (14) at (3, 2.75) {$y$};
+		\node [style=none] (15) at (-0.5, 5) {$z$};
+		\node [style=none] (16) at (-3, 1) {};
+		\node [style=none] (17) at (-1.5, 3.5) {};
+		\node [style=none] (18) at (-2.25, 3.25) {$\mathbf B$};
+		\node [style=b] (19) at (-3, -1.15) {};
+		\node [style=none] (20) at (-3, -3) {};
+		\node [style=none] (21) at (-3.5, -2.25) {$\mathrm d\mathbf S$};
+		\node [style=none] (22) at (2.25, -3) {$S_0$};
+		\node [style=none] (23) at (-1.5, 0.5) {$S$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=sh] (8.center)
+			 to [in=-180, out=45, looseness=0.75] (11.center)
+			 to [in=45, out=0, looseness=1.50] (9.center)
+			 to [in=0, out=-135, looseness=0.75] (10.center)
+			 to [in=-135, out=-180, looseness=1.50] cycle;
+		\draw [style=das, bend right=45] (8.center) to (12.center);
+		\draw [style=das, bend right=45] (12.center) to (9.center);
+		\draw [style=das, in=-135, out=-90, looseness=1.25] (10.center) to (12.center);
+		\draw [style=das, in=-90, out=45, looseness=0.50] (12.center) to (11.center);
+		\draw [style=pla] (0.center) to (1.center);
+		\draw [style=pla] (1.center) to (10.center);
+		\draw [style=pla] (1.center) to (6.center);
+		\draw [style=axis] (1.center) to (2.center);
+		\draw [style=axis] (1.center) to (3.center);
+		\draw [style=axis] (1.center) to (5.center);
+		\draw [style=force] (16.center) to (17.center);
+		\draw [style=arr] (19) to (20.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

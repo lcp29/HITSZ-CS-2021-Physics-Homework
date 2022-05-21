@@ -1,0 +1,48 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (0, 3) {};
+		\node [style=none] (1) at (-3, 0) {};
+		\node [style=none] (2) at (0, -3) {};
+		\node [style=b] (3) at (0, 0) {};
+		\node [style=none] (4) at (-1, 0) {};
+		\node [style=none] (5) at (1, 0) {};
+		\node [style=none] (6) at (0, 1) {};
+		\node [style=none] (7) at (-3, 2.5) {};
+		\node [style=none] (8) at (-3.25, 2.25) {};
+		\node [style=none] (9) at (-3, 2) {};
+		\node [style=none] (10) at (-2.75, 2.25) {};
+		\node [style=none] (15) at (-3, 3) {I};
+		\node [style=b] (16) at (-3, 2.25) {};
+		\node [style=none] (17) at (0, 2) {};
+		\node [style=none] (18) at (-0.5, 2) {$\mathbf B$};
+		\node [style=none] (19) at (-2.15, -2.125) {};
+		\node [style=none] (20) at (-1.725, -2.475) {};
+		\node [style=none] (21) at (-1, -1) {};
+		\node [style=none] (22) at (-0.825, -1.15) {};
+		\node [style=none] (23) at (-0.5, -0.75) {};
+		\node [style=none] (24) at (0, -0.9) {};
+		\node [style=none] (25) at (-0.25, -1.25) {$\theta$};
+		\node [style=none] (26) at (-1.5, -1) {$\mathrm d\theta$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=pla, bend right=45] (0.center) to (1.center);
+		\draw [style=pla, bend right=45] (1.center) to (2.center);
+		\draw [style=pla, bend right=45] (7.center) to (8.center);
+		\draw [style=pla, bend right=45] (8.center) to (9.center);
+		\draw [style=pla, bend left=45] (10.center) to (9.center);
+		\draw [style=pla, bend right=45] (10.center) to (7.center);
+		\draw [style=fie] (3) to (4.center);
+		\draw [style=fie] (3) to (5.center);
+		\draw [style=fieldrange] (5.center)
+			 to (4.center)
+			 to [bend left=45] (6.center)
+			 to [bend left=45] cycle;
+		\draw [style=fie] (3) to (17.center);
+		\draw [style=das] (19.center) to (3);
+		\draw [style=das] (3) to (2.center);
+		\draw [style=das] (20.center) to (3);
+		\draw [style=pla, bend left=15, looseness=1.25] (22.center) to (21.center);
+		\draw [style=pla, bend right=15] (23.center) to (24.center);
+		\draw [style=das] (17.center) to (0.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

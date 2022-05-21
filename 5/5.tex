@@ -1,0 +1,198 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{tikzit}
+\input{hm.tikzstyles}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+	
+}
+\begin{document}
+	\sol{7-1}
+	\ctikzfig{fig1}
+	
+	假设载流导线是均匀的，取导线上顺时针为电流正向，$AB$间较短导线上的电流$I_1$与较长导线上的电流$I_2$之间满足
+	$$\frac{I_1}{-I_2}=\frac{2\pi-\theta}{\theta}.$$
+	
+	取圆弧上一电流元$I\mathrm dl$，设导线圈半径为$R$，由B-S定律，其在$O$点产生的磁感应强度为
+	$$\mathrm dB=\frac{\mu_0}{4\pi}\frac{I\mathrm dl}{R^2}=\alpha I\mathrm dl,$$
+	
+	方向垂直纸面向里为正，其中$\alpha=\mu_0/\left(4\pi R^2\right)$. $O$点磁感应强度
+	\begin{align*}
+		B_O&=\int_{L}\mathrm dB\\
+		&=\int_{0}^{\theta}\alpha I_1R\mathrm d\theta+\int_{\theta}^{2\pi}\alpha I_2R\mathrm d\theta\\
+		&=\alpha I_1R\theta+\alpha\frac{\theta}{\theta-2\pi}I_1\left(2\pi-\theta\right)\\
+		&=0.
+	\end{align*}
+
+	综上，$O$点的磁感应强度为$0$.
+	\sol{7-5}
+	由带点球面的电势与电荷量关系，有
+	$$U-U_{\infty}=\frac{Q}{4\pi\epsilon_0R}.$$
+	
+	解得
+	$$Q=4\pi\epsilon_0 RU.$$
+	
+	电荷面密度
+	$$\sigma=\frac{Q}{4\pi R^2}=\frac{\epsilon_0 U}{R}.$$
+	
+	按题图，$\theta$处圆环的电荷量为$$\mathrm dq=2\pi\sigma R\sin\theta R\mathrm d\theta.$$
+	
+	旋转产生的电流
+	$$I\mathrm dl=\frac{\mathrm dq}{T}=\frac{\omega\mathrm dq}{2\pi}.$$
+	
+	由对称性，该电流环在$O$点产生的磁感应强度方向与$\vec\omega$相同. 由B-S定律可得
+	\begin{align*}
+		\mathrm dB&=2\pi R\sin\theta\times \frac{\mu_0I\mathrm dl}{4\pi R^2}\sin\theta\\
+		&=\frac{\mu_0\epsilon_0\omega U}{2}\sin^3\theta\mathrm d\theta.
+	\end{align*}
+	\begin{align*}
+		B&=\int_{0}^{2\pi}\mathrm dB\\
+		&=\int_{0}^{\pi}\frac{\mu_0\epsilon_0\omega U}{2}\sin^3\theta\mathrm d\theta\\
+		&=\frac{2\mu_o\epsilon_0\omega U}{3}.
+	\end{align*}	
+	\sol{7-6}
+	\ctikzfig{fig2}
+	
+	设磁通量向球壳表面凸方向为正. 场$\mathbf B$显然是无源的，所以存在矢量场$\mathbf A$，使得$\mathbf B$对任意有边界曲面$S$的通量只取决于$\mathbf A$在边界上的环量$\left(\iint_{S}\mathbf B\cdot\mathrm d\mathbf S=\oint_{\partial S}\mathbf A\cdot\mathrm d\mathbf l\right)$，记半球面为$S_0$，开口圆平面为$S$，由于两个曲面有共同的边界，所以他们的通量相同.
+	\begin{align*}
+		\Phi&=\iint_{S_0}\mathbf B\cdot\mathrm d\mathbf S_0\\
+		&=\iint_{S}\mathbf B\cdot\mathrm d\mathbf S\\
+		&=\mathbf B\cdot\mathbf S\\
+		&=\left(a\mathbf i+b\mathbf j+c\mathbf k\right)\cdot\left(-\pi R^2\mathbf k\right)\\
+		&=-\pi cR^2.
+	\end{align*}
+	\sol{7-8}
+	由对称性得螺绕环内的磁感应强度方向沿圆环方向. 设距螺绕环对称轴$r\left(R_1\leq r\leq R_2\right)$处位置的磁感应强度大小为$B(r)$，由安培环路定理，
+	$$2\pi rB(r)=\mu_0NI,$$
+	
+	解得$B(r)=\mu_0NI/\left(2\pi r\right)$. 铁芯截面的磁通量
+	$$\Phi=h\int_{R_1}^{R_2}B(r)\mathrm dr=\frac{\mu_0NIh}{2\pi}\ln\frac{R_2}{R_1}.$$
+	\sol{7-9}
+	\subsubsection*{(1)}
+	\ctikzfig{fig3}
+	
+	在杆上取线元$\mathrm dl$，到$O$点的距离为$l$，线元因旋转产生的电流为
+	$$\mathrm dI=\frac{\lambda\mathrm dl}{T}=\frac{\lambda\omega\mathrm dl}{2\pi}.$$
+	
+	在$O$点产生的磁感应强度大小
+	$$\mathrm dB_O=\frac{\mu_0\mathrm dI}{4\pi l^2}\cdot2\pi l=\frac{\mu_0\lambda\omega\mathrm dl}{4\pi l}.$$
+	
+	$O$点的磁感应强度大小
+	$$B_O=\int_{a}^{a+b}\frac{\mu_0\lambda\omega\mathrm dl}{4\pi l}=\frac{\mu_0\lambda\omega }{4\pi}\ln\frac{a+b}{a}.$$
+	
+	记垂直纸面向里的单位向量为$\hat{\mathbf{e_z}}$，$O$点的磁感应强度
+	$$\mathbf{B_O}=\frac{\mu_0\lambda\omega }{4\pi}\ln\frac{a+b}{a}\hat{\mathbf{e_z}}.$$
+	
+	\subsubsection*{(2)}
+	线元$\mathrm dl$产生的磁矩
+	$$\mathrm d\mathbf m=\mathrm dI\cdot\mathbf S=\frac{\lambda\omega\mathrm dl}{2\pi}\cdot\pi l^2\hat{\mathbf{e_z}}=\frac{\lambda\omega\mathrm dl}{2}\cdot l^2\hat{\mathbf{e_z}}.$$
+	
+	总磁矩
+	\begin{align*}
+		\mathbf m&=\int_{l=a}^{l=a+b}\mathrm d\mathbf m\\
+		&=\int_{a}^{a+b}\frac{\lambda\omega\mathrm dl}{2}\cdot l^2\hat{\mathbf{e_z}}\\
+		&=\frac{\lambda\omega\left[\left(a+b\right)^3-a^3\right]}{6}.
+	\end{align*}
+	
+	
+	\subsubsection*{(3)}
+	当$a\gg b$时，
+	\begin{align*}
+		\mathbf{B_O}&=\frac{\mu_0\lambda\omega }{4\pi}\ln\frac{a+b}{a}\hat{\mathbf{e_z}}\\
+		&\approx\frac{\mu_0\lambda\omega }{4\pi}\cdot\frac{b}{a}\\
+		&=\frac{\mu_0\lambda b\omega }{4\pi a}.
+	\end{align*}
+	\begin{align*}
+		\mathbf m&=\frac{\lambda\omega\left[\left(a+b\right)^3-a^3\right]}{6}\\
+		&\approx\frac{\lambda\omega a^3}{6}\left[\left(1+\frac{b}{a}\right)^3-1\right]\\
+		&=\frac{\lambda\omega a^3}{6}\cdot\frac{3b}{a}\\
+		&=\frac{\lambda\omega a^2 b}{2}.
+	\end{align*}
+	
+	\sol{7-10}
+	由对称性及B-S定律得，电子所在位置的磁感应强度方向为垂直纸面向里，设其大小为$B$，由安培环路定理，
+	$$2\pi\cdot3rB=\mu_0I,$$
+	
+	解得
+	$$B=\frac{\mu_0I}{6\pi r}.$$
+	
+	$\mathbf v$与磁感应强度方向垂直，由$\mathbf F=-e\mathbf v\times\mathbf B$可得电子所受磁场力的方向垂直导线在纸面内向左，大小
+	$$F=\frac{\mu_0Iev}{6\pi r},$$
+	
+	其中$v=\left|\mathbf v\right|$.
+	
+	\sol{7-11}
+	\ctikzfig{fig4}
+	
+	由安培环路定理可得距无限长导线$r$处的磁感应强度大小为
+	$$B(r)=\frac{\mu_0I_1}{2\pi r},$$
+	
+	方向垂直导线且可使用相对电流方向的右手螺旋定向.
+	
+	与无限长导线平行的一段导线所受安培力大小为
+	$$F_1=B(d)aI_2=\frac{\mu_0aI_1I_2}{2\pi d}.$$
+	
+	剩余两段直导线所受的安培力关于$F_1$所在直线对称，设其大小为$F_2$.
+	\begin{align*}
+		F_2&=\int_{0}^{a}I_2B(d+\frac{\sqrt{3}}{2}l)\mathrm dl\\
+		&=\int_{0}^{a}\frac{\mu_0I_1I_2}{2\pi \left(d+\frac{\sqrt{3}}{2}l\right)}\mathrm dl\\
+		&=\frac{\sqrt{3}\mu_0I_1I_2}{3\pi}\ln\left(1+\frac{\sqrt{3}a}{2d}\right).
+	\end{align*}
+
+	等边三角形导线框所受的安培力总和的大小
+	\begin{align*}
+		F&=F_1-2F_2\sin30^\circ{}\\
+		&=\frac{\mu_0I_1I_2}{\pi}\left[\frac{a}{2d}-\frac{\sqrt{3}}{3}\ln\left(1+\frac{\sqrt{3}a}{2d}\right)\right].
+	\end{align*}
+	
+	方向垂直无限长导线向左.
+	
+	\sol{7-14}
+	\ctikzfig{fig5}
+	
+	设电流方向从上到下看逆时针为正，圆柱截面半径为$R$，设斜面倾角为$\theta$.如图建立坐标系，则导线框的磁矩
+	$$\mathbf m=2lNRI\hat{\mathbf{e_z}}.$$
+	
+	安培力形成的力偶矩
+	$$\mathbf M_1=\mathbf m\times\mathbf B=-2lNRIB\sin\theta\hat{\mathbf{e_y}}.$$
+	
+	将力偶矩$\mathbf M_1$平移至点$A$，重力在点$A$产生的力矩
+	$$\mathbf M_g=mgR\sin\theta\hat{\mathbf{e_y}}.$$
+	
+	由力矩平衡$\mathbf M_1+\mathbf M_g=0$得
+	$$I=\frac{mg}{2NlB}.$$
+	
+	\sol{7-15}
+	\ctikzfig{fig6}
+	
+	由对称性易得磁感应强度的方向如图所示.如图按角度分割，设其产生的磁感应强度在合场强方向的投影为$\mathrm dB_y$，
+	$$\mathrm dB_y=\frac{\mu_0}{2\pi R}\cdot\frac{I\mathrm d\theta}{\pi}\cdot\sin\theta.$$
+	
+	半圆同轴线上磁感应强度大小
+	\begin{align*}
+		B&=\int_{0}^{\pi}\mathrm dB_y\\
+		&=\int_{0}^{\pi}\frac{\mu_0}{2\pi R}\cdot\frac{I\mathrm d\theta}{\pi}\cdot\sin\theta\\
+		&=\frac{\mu_0I}{\pi^2R}.
+	\end{align*}
+
+	方向如图所示.
+	
+	\sol{7-17}
+	\ctikzfig{fig7}
+	
+	设导线框的质心到$OO'$轴的距离为$r_c$，正方形边长为$a$，线框的正方形三边的总质量为$3m$. 两个径向段的质心位置$r_{c1}=a/2$，质量为$m_1=2m$，与$OO'$平行段杆的质心位置为$r_{c2}=a$，质量为$m_2=m$，总的质心位置为$r_c=\left(r_{c1}m_1+r_{c2}m_2\right)/(3m)=2a/3$.
+	
+	导线框所受安培力如图，大小为$BIa$.由力矩平衡
+	$$BIa\cdot a\cos\alpha=3mgr_c\sin\alpha$$
+	
+	得
+	$$B=\frac{3mgr_c\tan\alpha}{a^2I}=\frac{2mg\tan\alpha}{aI},$$
+	
+	代入$m=\rho Sa$得
+	$$B=\frac{2\rho Sg\tan\alpha}{I},$$
+	
+	代入数值$S=2.0\ \mathrm{mm^2}$，$\rho=8.9\ \mathrm{g/cm^3}$，$I=10\ \mathrm A$，$\alpha=15^\circ{}$，$g=9.8\ \mathrm{m/s^2}$得
+	$$B=9.35\ \mathrm{mT}.$$
+\end{document}

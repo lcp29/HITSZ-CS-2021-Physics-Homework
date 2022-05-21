@@ -1,0 +1,281 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{tikzit}
+\input{hm.tikzstyles}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+	
+}
+\begin{document}
+	\sol{6-1}
+	\ctikzfig{fig1}
+	
+	电荷线密度$\eta=Q/L$.
+	
+	如图取细棒微元，对牛顿第二定律积分
+	$$\int_{0}^{F}\mathrm{d}F=\int_{a-\frac{L}{2}}^{a+\frac{L}{2}}\frac{1}{4\pi\epsilon_0}\frac{\eta\mathrm{d}x\cdot q}{x^2}$$
+	
+	得
+	$$F=\frac{Qq}{\pi\epsilon_0\left(4a^2-L^2\right)}.$$
+	
+	\sol{6-3}
+	\ctikzfig{fig5}
+	
+	各物理量定义如上图. 取球面上面元$\mathrm{d}S$. $\mathrm{d}S$在$O$点处产生的场强大小为
+	$$\mathrm{d}E=\frac{1}{4\pi\epsilon_0}\cdot\frac{\sigma\mathrm{d}S}{R^2}.$$
+	
+	由对称性得$O$点电场强度方向与平面$\Sigma$垂直，场强垂直$\Sigma$的分量
+	\begin{align*}
+		\mathrm{d}E_y&=\mathrm{d}E\cos\theta\\
+		&=\frac{1}{4\pi\epsilon_0}\cdot\frac{\sigma\mathrm{d}S}{R^2}\cdot\cos\theta\\
+		&=\frac{1}{4\pi\epsilon_0}\cdot\frac{\sigma\mathrm{d}S'}{R^2}.
+	\end{align*}
+	
+	其中$\mathrm{d}S'$是$\mathrm{d}S$在平面$\Sigma$上的投影.
+	
+	$O$点场强大小
+	\begin{align*}
+		E&=E_y\\
+		&=\iint_S\mathrm{d}E_y\\
+		&=\iint_S'\frac{1}{4\pi\epsilon_0}\cdot\frac{\sigma\mathrm{d}S'}{R^2}\\
+		&=\frac{1}{4\pi\epsilon_0}\cdot\frac{\sigma}{R^2}\cdot\pi R^2\\
+		&=\frac{\sigma}{4\epsilon_0},
+	\end{align*}
+	
+	方向垂直开口圆面指向开口外侧.
+	
+	\sol{6-5}
+	\subsubsection*{(1)}
+	由对称性得平面上电场强度方向与两条导线垂直. 先求单条导线的场强大小$E_\lambda(r)$.
+	\ctikzfig{fig2}
+	
+	由高斯定理，
+	$$E\cdot 2\pi r\mathrm{d}x=\frac{1}{\epsilon_0}\lambda\mathrm{d}x$$
+	
+	得
+	$$E_\lambda(r)=\frac{\lambda}{2\pi\epsilon_0 r}.$$
+	
+	平面上的场强
+	\begin{align*}
+		E(r)&=-E_{+\lambda}(\frac{a}{2}-x)+E_{-\lambda}(x+\frac{a}{2})\\
+		&=\frac{2\lambda a}{\pi\epsilon_0\left(4x^2-a^2\right)}.
+	\end{align*}
+	
+	方向沿$+x$为正.
+	
+	\subsubsection*{(2)}
+	先考虑电场力的大小$F$.
+	
+	不妨在$+\lambda$上取线元$\mathrm{d}l$.
+	\ctikzfig{fig3}
+	
+	外场强度$E=E_{-\lambda}(a)=-\lambda/\left(2\pi\epsilon_0a\right)$，线元所受电场力$\mathrm{d}F=\lambda\mathrm{d}l\cdot E_{-\lambda}(a)=-\lambda^2\mathrm{d}l/\left(2\pi\epsilon_0a\right)$，符号表示方向向左. 单位长度线元所受电场力大小
+	$$\frac{\mathrm{d}F}{\mathrm{d}l}=\frac{\lambda^2}{2\pi\epsilon_0a}.$$
+	
+	方向均沿$x$轴指向对侧导线.
+	\sol{6-6}
+	使用叠加方法. 由高斯定理得半径为$R$的球体内部场强大小$E(r)$满足
+	$$4\pi r^2E(r)=\frac{1}{\epsilon_0}\cdot\frac{4}{3}\pi r^3\rho,$$
+	
+	整理得$E(r)=\rho r/\left(3\epsilon_0\right)$，写成矢量形式为
+	$$\vec{E}(\vec r)=\frac{\rho}{3\epsilon_0}\vec r.$$
+	
+	空腔内部点$P$处的场强为
+	\begin{align*}
+		\vec{E}(\vec{{O_2}P})&=\frac{\rho}{3\epsilon_0}\left(\vec{O_1P}\right)-\frac{\rho}{3\epsilon_0}\left(\vec{O_2P}\right)\\
+		&=\frac{\rho}{3\epsilon_0}\vec{O_1O_2}.
+	\end{align*}
+	
+	代入$|O_1O_2|=a$得场强大小
+	$$E=\frac{\rho a}{3\epsilon_0}.$$
+	\sol{6-8}
+	\ctikzfig{fig4}
+	
+	如图，由对称性易得三个颜色的方形侧面的电场强度通量相等. 取8个这样的正方体按$A$点中心对称拼成一个大正方体，则24个上色小平面将大正方体完全覆盖. 设一个小平面的电场强度通量为$\Phi$，由高斯定理
+	$$24\Phi=\frac{q}{\epsilon_0}$$
+	得
+	$$\Phi=\frac{q}{24\epsilon_0}.$$
+	
+	\sol{6-10}
+	由对称性容易得到直线$BP$上电场强度沿线分量为$0$(交换正负电荷，由$\vec E=\int_L\frac{1}{4\pi\epsilon_0}\frac{\mathrm{d}q}{r^2}\cdot\hat{\mathbf{r}}$得交换前后电场强度反向，另有交换前后电场强度关于$BP$轴对称). 则$P$点电势$\phi(P)=\phi(B)=0$.
+	
+	对$O$点电势使用积分处理. 已知$B$点和无穷远点电势均为$0$，则$O$点电势
+	\begin{align*}
+		\phi(O)&=\int_{-l}^{0}\frac{1}{4\pi\epsilon_0}\cdot\frac{-\lambda\mathrm{d}x}{x+2l}+\int_{0}^{l}\frac{1}{4\pi\epsilon_0}\cdot\frac{\lambda\mathrm{d}x}{x+2l}\\
+		&=\frac{\lambda}{4\pi\epsilon_0}\left(\ln\left(\frac{3}{2}\right)-\ln2\right)\\
+		&=-\frac{\lambda}{4\pi\epsilon_0}\ln\frac{4}{3}.
+	\end{align*}
+	\sol{6-11}
+	\ctikzfig{fig6}
+	在球体内部取沿径向的圆锥体高斯面，底面积为$\delta S$. 由对称性得电场强度沿径向，由高斯定理，
+	$$E(r_0)\cdot\delta S+o\left(E(r_0)\cdot\delta S\right)=\frac{1}{\epsilon_0}\int_{0}^{r_0}\rho\frac{\delta Sr^2}{r_0^2}\mathrm{d}r,$$
+	
+	其中$o(x)$表示$x$的高阶无穷小量. 解上式得$E(r)\cdot\delta S+o\left(E(r)\cdot\delta S\right)=k\delta S/(2\epsilon_0)$，令$\delta S\to0$得
+	$$E(r)=\frac{k}{2\epsilon_0}.$$
+	
+	方向沿径向向外.
+	
+	在球外，由高斯定理
+	$$4\pi R^2E(R)=4\pi r^2E(r)$$
+	
+	得$E(r)=kR^2/\left(2\epsilon_0r^2\right)$，综上，电场强度大小分布
+	$$E(r)=\left\{
+	\begin{array}{ll}
+		\displaystyle{\frac{k}{2\epsilon_0}} &,0\leq r\leq R,\\
+		\displaystyle{\frac{kR^2}{2\epsilon_0r^2}} &,r>R.
+	\end{array}\right.$$
+
+	方向沿径向向外.
+	
+	使用积分法求电势. 当$r\leq R$时，
+	$$\phi(r)=\int_{r}^{+\infty}E(r)\mathrm{d}r=\frac{kR^2}{2\epsilon_0r}.$$
+	
+	当$r<R$时，
+	$$\phi(r)=\int_{r}^{R}E(r)\mathrm{d}r+\phi(R)=\frac{k}{2\epsilon_0}(2R-r).$$
+	
+	综上，球内外电势分布
+	$$\phi(r)=\left\{
+	\begin{array}{ll}
+		\displaystyle{\frac{k}{2\epsilon_0}(2R-r)} &,0\leq r<R,\\
+		\displaystyle{\frac{kR^2}{2\epsilon_0r}} &,r>R.
+	\end{array}\right.$$
+
+	\sol{6-13}
+	初态体系中的电势能
+	\begin{align*}
+		E_0&=\frac{1}{4\pi\epsilon_0}\sum_{i<j}\frac{q_iq_j}{r_{ij}}\\
+		&=\frac{1}{4\pi\epsilon_0}\left(\frac{2q\cdot q}{R}+\frac{2q\cdot(-3q)}{2R}+\frac{(-3q)\cdot q}{R}\right)\\
+		&=-\frac{q^2}{\pi\epsilon_0R}.
+	\end{align*}
+	
+	同理，末态体系中的电势能
+	$$E_1=\frac{q^2}{4\pi\epsilon_0R}\left(\frac{2\cdot1}{3}+\frac{2\cdot(-3)}{2}+\frac{-3\cdot1}{1}\right)=-\frac{4q^2}{3\pi\epsilon_0R}.$$
+	
+	电场力做功
+	$$W=-\Delta E=E_0-E_1=\frac{q^2}{3\pi\epsilon_0R}.$$
+	
+	\sol{6-16}
+	对大平板$A$,$B$采用近似，$A$,$B$平板两侧的电荷面密度如图所示.
+	\ctikzfig{fig7}
+	
+	由于$B$板接地，$B$板右侧没有电场. 由高斯定理，
+	\begin{align}
+		&\sigma_D=0\\
+		&\sigma_B+\sigma_C=0
+	\end{align}
+	
+	由近似条件得$BC$间为匀强电场. 记$BC$间电场强度$E$向右为正，由高斯定理，
+	\begin{align}
+		&E=\frac{\sigma_B}{\epsilon_0}
+	\end{align}
+	
+	由无穷大均匀带电平面的场强公式得
+	\begin{align}
+		\frac{\sigma_A}{2\epsilon_0}+\frac{\sigma_B}{2\epsilon_0}-\frac{\sigma_C}{2\epsilon_0}=E
+	\end{align}
+	
+	电荷守恒
+	\begin{align}
+		\sigma_A+\sigma_B=\frac{Q_1}{S}
+	\end{align}
+	由$(1)(2)(3)(4)(5)$解得
+	$$\sigma_A=0,\sigma_B=-\sigma_C=\frac{Q_1}{S}.$$
+	$$E=\frac{Q_1}{\epsilon_0S},$$
+	
+	方向由$A$板指向$B$板.
+	
+	\sol{6-17}
+	\subsubsection*{(1)}
+	\ctikzfig{fig8}
+	
+	$B$,$C$外侧无电场，由高斯定理可得$B$,$C$外侧不带电荷，且$AC$,$AB$之间相对的平面带电量之和为零.
+	
+	由高斯定理可得平板间电场强度大小$E_{A}=\sigma_A/\epsilon_0$，$E_{B}=\sigma_B/\epsilon_0$. 又$\phi(C)=\phi(B)=0$，故$\phi(A)=E_Ad_A=E_Bd_B$，即
+	$$\frac{E_A}{E_B}=\frac{\sigma_A}{\sigma_B}=\frac{d_B}{d_A}.$$
+	
+	设平板面积为$S$，$A$板带电量为$Q_A$，由电荷守恒$\left(\sigma_A+\sigma_B\right)S=Q_A$得
+	$$\sigma_AS=\frac{d_BQ_A}{d_A+d_B},\sigma_BS=\frac{d_AQ_A}{d_A+d_B}.$$
+	
+	代入数值得$C$板带电量$Q_C=-\sigma_AS=-2.0\times10^{-7}\mathrm{C}$，$B$板带电量$Q_B=-\sigma_BS=-1.0\times10^{-7}\mathrm{C}$.
+	
+	\subsubsection*{(2)}
+	由(1)得$\phi(A)=E_Ad_A=\sigma_Ad_A/\epsilon_0=-Q_Cd_A/(\epsilon_0S)$，代入数值得$\phi(A)=2.26\times10^{4}\mathrm{V}$.
+	
+	\sol{6-18}
+	\ctikzfig{fig9}
+	
+	由高斯定理得球壳接地后，球面外侧带电量为零，球面内侧不均匀带电，带电量$-q$，取消接地后球壳内侧的电荷分布及场强分布不变.取无穷远处为电势零点，$O$点电势
+	\begin{align*}
+		\phi(O)&=\frac{q}{4\pi\epsilon_0 d}+\iint_{S}\frac{\mathrm{d}q}{4\pi\epsilon_0{R}}\\
+		&=\frac{q}{4\pi\epsilon_0 d}+\frac{1}{4\pi\epsilon_0{R}}\iint_{S}\mathrm{d}q\\
+		&=\frac{q}{4\pi\epsilon_0 d}-\frac{q}{4\pi\epsilon_0{R}}\\
+		&=\frac{q}{4\pi\epsilon_0}\left(\frac{1}{d}-\frac{1}{R}\right).
+	\end{align*}
+	
+	\sol{6-21}
+	\subsubsection*{(1)}
+	由电介质存在时的高斯定理,\\
+	①\ 当$r\geq R_3$时，有$4\pi\epsilon_0r^2E=Q_1+Q_2$，即
+	$$E=\frac{Q_1+Q_2}{4\pi\epsilon_0r^2}(r>R_3).$$
+	②\ 当$0\leq r<R_1$或$R_2\leq r<R_3$时，有$E=0$.\\
+	③\ 当$R_1\leq r<R_2$时，有$4\pi\epsilon_r\epsilon_0r^2E=Q_1$，即
+	$$E=\frac{Q_1}{4\pi\epsilon_r\epsilon_0r^2}(R_1\leq r<R_2).$$
+	
+	综上，设径向单位矢量为$\hat{\mathbf{e}_r}$，空间电场强度分布
+	$$\mathbf{E}(\mathbf{r})=\left\{\begin{array}{ll}
+		\displaystyle{\frac{Q_1+Q_2}{4\pi\epsilon_0r^2}}&,r\geq R_3,\\
+		0&,0\leq r<R_1\textrm{\ or\ }R_2\leq r<R_3,\\
+		\displaystyle{\frac{Q_1}{4\pi\epsilon_r\epsilon_0r^2}}&,R_1\leq r<R_2.
+	\end{array}\right.$$
+	\subsubsection*{(2)}
+	电场能量密度
+	$$w=\frac{1}{2}\mathbf{D}\cdot\mathbf{E}=\frac{1}{2}\epsilon_r\epsilon_0E^2=\frac{Q_1^2}{32\pi^2\epsilon_r\epsilon_0 r^4}.$$
+	
+	电场能量
+	\begin{align*}
+		W_e&=\int_{R_1}^{R_2}w\cdot4\pi r^2\mathrm{d}r\\
+		&=\frac{Q_1^2}{8\pi\epsilon_r\epsilon_0}\int_{R_1}^{R_2}\frac{1}{r^2}\mathrm{d}r\\
+		&=\frac{Q_1^2}{8\pi\epsilon_r\epsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right).
+	\end{align*}
+	\subsubsection*{(3)}
+	将数值代入(2)题答案，得
+	$$W_e=5.99\times10^{-4}\ \mathrm{J}.$$
+	
+	\sol{6-23}
+	先推导电容器的电容$C$.
+	
+	设电容器带电$Q$，内极板带正电.由高斯定理得两极板之间距球心$r$处的电场强度
+	$$\mathbf E=\frac{Q}{4\pi\epsilon_0r^2}\hat{\mathbf e_r}.$$
+	
+	两极板间电势差
+	$$U=\int_{R_1}^{R_2}\frac{Q}{4\pi\epsilon_0r^2}\mathrm{d}r=\frac{Q}{4\pi\epsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right).$$
+	
+	电容
+	$$C=\frac{Q}{U}=\frac{4\pi\epsilon_0R_1R_2}{R_2-R_1}.$$
+	\noindent
+	电容器能量公式：
+	$$W_e=\frac{1}{2}C(\Delta U)^2=\frac{2\pi\epsilon_0R_1R_2(\Delta U)^2}{R_2-R_1}.$$
+	
+	\noindent
+	电场能量公式：
+	
+	电容带电量
+	$$Q=C\Delta U=\frac{4\pi\epsilon_0R_1R_2\Delta U}{R_2-R_1}.$$
+	
+	电容器内部场强大小
+	$$E(r)=\frac{Q}{4\pi\epsilon_0 r^2}.$$
+	
+	电场能量密度
+	$$w=\frac{1}{2}\mathbf{D}\cdot\mathbf{E}=\frac{1}{2}\epsilon_0\left[E(r)\right]^2=\frac{Q^2}{32\pi^2\epsilon_0 r^4}.$$
+	
+	电容器储存的电能
+	\begin{align*}
+		W_e&=\int_{R_1}^{R_2}w\cdot4\pi r^2\mathrm{d}r\\
+		&=\int_{R_1}^{R_2}\frac{Q^2}{8\pi\epsilon_0 r^2}\mathrm{d}r\\
+		&=\frac{Q^2}{8\pi\epsilon_0}\left(\frac{1}{R_1}-\frac{1}{R_2}\right)\\
+		&=\frac{2\pi\epsilon_0R_1R_2(\Delta U)^2}{R_2-R_1}.
+	\end{align*}
+	
+\end{document}

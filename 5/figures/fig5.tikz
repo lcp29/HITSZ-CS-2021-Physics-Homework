@@ -1,0 +1,57 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-3, 2) {};
+		\node [style=none] (1) at (-3, -1) {};
+		\node [style=none] (2) at (4, -1) {};
+		\node [style=none] (3) at (0.125, 3.8) {};
+		\node [style=none] (4) at (-1.375, 2.3) {};
+		\node [style=none] (5) at (1.625, 2.3) {};
+		\node [style=none] (6) at (0.125, 0.8) {};
+		\node [style=b] (7) at (0.125, 2.3) {};
+		\node [style=none] (8) at (-1.275, 2.9) {};
+		\node [style=none] (9) at (1.5, 1.725) {};
+		\node [style=b] (10) at (-3.75, 4.75) {};
+		\node [style=none] (11) at (-3, 6.5) {};
+		\node [style=none] (12) at (-2, 4) {};
+		\node [style=none] (13) at (-1.5, 4.25) {$\hat{\mathbf{e_x}}$};
+		\node [style=none] (14) at (-3.25, 7) {$\hat{\mathbf{e_z}}$};
+		\node [style=none] (15) at (-2.5, 5.55) {};
+		\node [style=none] (16) at (-2.8, 5.25) {};
+		\node [style=none] (17) at (-2.5, 4.95) {};
+		\node [style=none] (18) at (-2.2, 5.25) {};
+		\node [style=none] (19) at (-2.725, 5.475) {};
+		\node [style=none] (20) at (-2.275, 5.475) {};
+		\node [style=none] (21) at (-2.275, 5.025) {};
+		\node [style=none] (22) at (-2.725, 5.025) {};
+		\node [style=none] (23) at (-2, 5.75) {$\hat{\mathbf{e_y}}$};
+		\node [style=none] (24) at (0, 2.8) {$O$};
+		\node [style=none] (25) at (3, 5) {};
+		\node [style=none] (26) at (3, 3) {};
+		\node [style=none] (27) at (3, 5.5) {$\mathbf B$};
+		\node [style=none] (28) at (0.525, 3.225) {};
+		\node [style=none] (29) at (1, 3) {$\mathbf m$};
+		\node [style=b] (30) at (-0.5, 0.925) {};
+		\node [style=none] (31) at (-1, 0.75) {$A$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=pla] (0.center) to (2.center);
+		\draw [style=pla] (2.center) to (1.center);
+		\draw [style=pla] (1.center) to (0.center);
+		\draw [style=pla] (5.center)
+			 to [bend right=45] (3.center)
+			 to [bend left=315] (4.center)
+			 to [bend right=45] (6.center)
+			 to [bend right=45] cycle;
+		\draw [style=big wire] (8.center) to (9.center);
+		\draw [style=arr] (10) to (11.center);
+		\draw [style=arr] (10) to (12.center);
+		\draw [style=pla, bend left=45] (16.center) to (15.center);
+		\draw [style=pla, bend left=45] (15.center) to (18.center);
+		\draw [style=pla, bend left=45] (18.center) to (17.center);
+		\draw [style=pla, bend left=45] (17.center) to (16.center);
+		\draw [style=pla] (19.center) to (21.center);
+		\draw [style=pla] (22.center) to (20.center);
+		\draw [style=fie] (26.center) to (25.center);
+		\draw [style=arr] (7) to (28.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

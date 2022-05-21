@@ -1,0 +1,37 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-4, 0) {};
+		\node [style=none] (1) at (4, 0) {};
+		\node [style=none] (2) at (0, -4) {};
+		\node [style=none] (3) at (0, 0) {};
+		\node [style=none] (4) at (0, -5) {};
+		\node [style=none] (5) at (1.475, -3.175) {};
+		\node [style=none] (6) at (1.225, -3.425) {};
+		\node [style=none] (7) at (1.725, -3.425) {};
+		\node [style=none] (8) at (1.475, -3.675) {};
+		\node [style=none] (9) at (2.075, -4.825) {};
+		\node [style=none] (10) at (1.475, -3.425) {};
+		\node [style=none] (11) at (1.475, -5.5) {};
+		\node [style=none] (12) at (0.825, -1.925) {};
+		\node [style=none] (13) at (1.575, -3.675) {};
+		\node [style=none] (14) at (2, -5.75) {$\mathbf{G}$};
+		\node [style=none] (15) at (1.25, -1.5) {$\mathbf{N}$};
+		\node [style=none] (16) at (0, -1) {};
+		\node [style=none] (17) at (0.375, -0.925) {};
+		\node [style=none] (18) at (0.25, -1.35) {$\theta$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [bend right=45] (0.center) to (2.center);
+		\draw [bend right=45] (2.center) to (1.center);
+		\draw [style=das] (3.center) to (4.center);
+		\draw [style=sh] (6.center)
+			 to [bend right=45] (8.center)
+			 to [bend right=45] (7.center)
+			 to [bend right=45] (5.center)
+			 to [bend right=45] cycle;
+		\draw [style=das] (9.center) to (3.center);
+		\draw [style=force] (10.center) to (11.center);
+		\draw [style=force] (13.center) to (12.center);
+		\draw [style=pla, bend right] (16.center) to (17.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

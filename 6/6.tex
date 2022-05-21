@@ -1,0 +1,186 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{tikzit}
+\input{hm.tikzstyles}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+	
+}
+\begin{document}
+	\sol{8-1}
+	\subsection*{(1)}
+	穿过导体回路的磁通量为
+	$$\Phi(t)=\mathbf{B}\cdot\pi a^2\mathbf{\hat e_n}=\frac{1}{2}\left(3t^2+8t+5\right)\pi\times10^{-6}\ \mathrm{Wb}.$$
+	
+	由法拉利电磁感应定律，感应电动势
+	\begin{align*}
+		\mathscr{E}&=-\frac{\mathrm{d}\Phi}{\mathrm{d}t}\\
+		&=-\left(3t+4\right)\pi\times10^{-6}\ \mathrm{V}.		
+	\end{align*}
+
+	感应电流
+	\begin{align*}
+		I&=-\frac{\mathscr{E}}{R}\\
+		&=-\left(3t+4\right)\pi\times10^{-3}\ \mathrm{A}.
+	\end{align*}
+	
+	当$t=2\ \mathrm{s}$时，代入数值有$\mathscr{E}=-3.14\times10^{-5}\ \mathrm{V}$，$I=-3.14\times10^{-2}\ \mathrm{A}$.
+	
+	感应电动势和感应电流的方向与图中标记的方向相反.
+	\subsection*{(2)}
+	最初$2\ \mathrm s$内通过回路截面的电荷量
+	\begin{align*}
+		C&=\left|\int_{0}^{2\ \mathrm s}I\mathrm{d}t\right|\\
+		&=\int_{0}^{2\ \mathrm s}\left(3t+4\right)\pi\times10^{-3}\mathrm{d}t\ \mathrm{C}\\
+		&=0.014\pi\ \mathrm{C}\\
+		&=0.044\ \mathrm{C}.
+	\end{align*}
+	
+	\sol{8-2}
+	\subsection*{(1)}
+	由安培环路定理，长直导线在距离$r$处产生的磁感应强度大小$B$满足
+	$$2\pi rB=\mu_0I,$$
+	
+	即$B=\mu_0I/\left(2\pi r\right)$.
+	
+	在直导线$CD$上取线元$\mathrm{d}l$，线元到$C$点的距离为$l$，则线元处的磁感应强度大小为
+	$$B(l)=\frac{\mu_0I}{2\pi\left(d+l\sin\theta\right)}.$$
+	
+	线元产生的动生电动势
+	\begin{align}
+		\mathrm{d}\mathscr{E}&=\mathrm{d}\mathbf{l}\cdot\left(\mathbf{v}\times\mathbf{B}\right)\\
+		&=\frac{\mu_0vI\cos\theta\mathrm{d}l}{2\pi\left(d+l\sin\theta\right)}.
+	\end{align}
+	
+	导线$CD$上的动生电动势
+	\begin{align*}
+		\mathscr{E}&=\int_{0}^{l}\mathrm{d}\mathscr{E}\\
+		&=\int_{0}^{l}\frac{\mu_0vI\cos\theta\mathrm{d}l}{2\pi\left(d+l\sin\theta\right)}\\
+		&=\frac{\mu_0vI}{2\pi\tan\theta}\ln\left(1+\frac{l}{d}\sin\theta\right).
+	\end{align*}
+
+	代入数值，得$\mathscr{E}=2.79\times10^{-4}\ \mathrm V$.
+	
+	\subsection*{(2)}
+	由于(1)式中$\mathrm{d}\mathbf{l}$与$\mathbf{v}\times\mathbf{B}$成锐角，故正电荷所受非静电力方向由$C$指向$D$，$D$端电势高.
+	
+	\sol{8-4}
+	以$Ob$为正方向，取到$O$点的有向距离为$x$的线元$\mathrm dx$，线元处的动生电动势为
+	$$\mathrm d\mathscr E=B\omega x\mathrm dx,$$
+	
+	其中$B$为地磁场的数值分量大小，动生电动势的方向以$Ob$方向为正.
+	
+	\begin{align*}
+		U_a-U_b&=\int_{\frac{3}{4}l}^{-\frac{1}{4}l}\mathrm d\mathscr E\\
+		&=\int_{\frac{3}{4}l}^{-\frac{1}{4}l}B\omega x\mathrm dx\\
+		&=-\frac{B\omega l^2}{4}<0.
+	\end{align*}
+	
+	$b$点电势高.
+	
+	\sol{8-6}
+	\subsection*{(1)}
+	\setcounter{equation}{0}
+	由对称性得导体棒的速度方向始终不变.
+	
+	回路中的感生电动势
+	\begin{align}
+		\mathscr E=Bvl,
+	\end{align}
+
+	其中$v=\frac{\mathrm dx}{\mathrm dt}$为导体棒的速度大小.
+	
+	全电路欧姆定律
+	\begin{align}
+		\mathscr E-IR=0,
+	\end{align}
+	
+	其中I为回路中的电流.
+	
+	牛顿第二定律
+	\begin{align}
+		-BIl=m\frac{\mathrm dv}{\mathrm dt}.
+	\end{align}
+
+	由(1)(2)(3)整理得
+	$$\frac{\mathrm dv}{v}=-\frac{B^2l^2}{mR}\mathrm dt,$$
+	
+	两边积分，整理得
+	
+	\begin{align}v=v_0\mathrm e^{-\frac{B^2l^2}{mR}t}.\end{align}
+	
+	\subsection*{(2)}
+	记$t=0$时导体棒的位置为原点，$\mathbf v$的方向为正方向，(4)式两边对时间积分，得
+	$$x=\frac{mv_0R}{B^2l^2}\left(1-\mathrm e^{-\frac{B^2l^2}{mR}t}\right).$$
+	
+	导体棒能移动的距离为
+	$$x_{max}=\frac{mv_0R}{B^2l^2}.$$
+	
+	\subsection*{(3)}
+	由(1)(4)得电阻上的电功率
+	$$W=I^2R=\frac{B^2l^2v_0^2}{R}\mathrm e^{-\frac{2B^2l^2}{mR}t},$$
+	
+	从$0$到$+\infty$对时间积分得
+	\begin{align*}
+		Q&=\int_{0}^{+\infty}\frac{B^2l^2v_0^2}{R}\mathrm e^{-\frac{2B^2l^2}{mR}t}\mathrm dt\\
+		&=\frac{1}{2}mv_0^2.
+	\end{align*}
+	
+	\subsection*{(4)}
+	导体棒在磁场中运动时，导体棒的动能在磁场的作用下转化为导体棒内的自由电荷沿导体棒方向的动能，即电流的能量。能量转换的媒介是导体内部自由电荷所受的洛伦兹力和自由电荷与导体棒的相互作用力（宏观上表现为安培力）。在忽略回路自感，即回路中电流产生的磁场以及忽略摩擦力和导体棒电阻的情况下，所有的电能都转化为由电阻产生的内能。因此当最终导体棒停止运动时，电阻产生的焦耳热与导体棒起初的动能相同。
+	
+	\sol{8-9}
+	由
+	$$\iint_{OQP}\frac{\mathrm d\mathbf B}{\mathrm dt}\cdot\mathrm d\mathbf S=-\oint_{OQP}\mathbf E\cdot\mathrm d\mathbf l$$
+	
+	得
+	$$\frac{\mathrm dB}{\mathrm dt}\cdot\frac{l\sqrt{R^2-\frac{l^2}{4}}}{2}=-\int_{QP}\mathbf E\cdot\mathrm d\mathbf l=\mathscr E.$$
+	
+	金属棒中产生的感应电动势的大小为\\$\frac{\mathrm dB}{\mathrm dt}\cdot\frac{l}{2}\sqrt{R^2-\frac{l^2}{4}}$.
+
+	\sol{8-10}
+	\subsection*{(1)}
+	距长直导线$r$处的磁感应强度大小
+	$$B=\frac{\mu_0I}{2\pi r}.$$
+	
+	矩形线圈平面内的磁感应强度与平面垂直，磁通量
+	$$\Phi=\iint_{S}B\mathrm dS=l\int_{a}^{b}\frac{\mu_0I}{2\pi r}\mathrm dr=\frac{\mu_0lI_0}{2\pi}\mathrm e^{-ct}\ln\frac{b}{a}.$$
+	
+	感应电动势的大小
+	\begin{align*}
+		\mathscr E&=\left|-\frac{\mathrm d\Phi}{\mathrm dt}\right|\\
+		&=\frac{\mu_0clI_0}{2\pi}\mathrm e^{-ct}\ln\frac{b}{a}.
+	\end{align*}
+
+	若$c>0$，则感应电流方向为顺时针，若$c<0$，则感应电流为逆时针方向.
+	\subsection*{(2)}
+	导线和线圈的互感系数
+	$$M=\frac{\Phi}{I}=\frac{\mu_0l}{2\pi}\ln\frac{b}{a}.$$
+	
+	\sol{8-11}
+	不妨在长直导线中加电流$I$. 矩形导线框内的磁通量
+	$$\Phi=c\int_{a}^{b}\frac{\mu_0I}{2\pi r}\mathrm dr=\frac{\mu_0cI}{2\pi}\ln\frac{b}{a}.$$
+	
+	互感系数
+	$$M=\frac{\Phi}{I}=\frac{\mu_0c}{2\pi}\ln\frac{b}{a}.$$
+	
+	长直导线中的感应电动势大小
+	$$\mathscr E=\left|-M\frac{\mathrm di}{\mathrm dt}\right|=\frac{\mu_0c\omega I_0}{2\pi}\cos\omega t\ln\frac{b}{a}.$$
+	
+	\sol{8-14}
+	两条导线可以看成在无限远处连接的回路。取其中长为$l$的部分，回路中长方形区域内的磁通量感应强度
+	\begin{align*}
+		\Phi&=\iint_S B\mathrm dS\\
+		&=2l\int_{0}^{d-r}\frac{\mu_0I}{2\pi r}\mathrm dr\\
+		&=\frac{\mu_0Il}{\pi}\ln\frac{d-r}{r}.
+	\end{align*}
+
+	自感
+	$$L=\frac{\Phi}{I}=\frac{\mu_0l}{\pi}\ln\frac{d-r}{r}.$$
+	
+	\sol{8-15}
+	自感电动势与$I$的变化率成正比，方向与$I$相反，选D.
+\end{document}

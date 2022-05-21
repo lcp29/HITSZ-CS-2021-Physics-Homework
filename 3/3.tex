@@ -1,0 +1,153 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{geometry}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+
+}
+
+\begin{document}
+	\sol{3-4}
+	设圆盘半径为$r$，左、右侧竖直绳长分别为$l_1$，$l_2$， 连接处张力分别为$T_1$，$T_2$.
+	
+	牛顿第二定律
+	\begin{align}
+		&l_1\frac{m}{l}g-T_1=l_1\frac{m}{l}a\\
+		&T_2-l_2\frac{m}{l}g=l_2\frac{m}{l}a
+	\end{align}
+	
+	转动定律
+	\begin{align}
+		T_1r-T_2r=\left(\frac{1}{2}m'r^2+\pi r\frac{m}{l}r^2\right)\beta
+	\end{align}
+
+	几何关系
+	\begin{align}
+		&l_1-l_2=s\\
+		&a=r\beta\\
+		&l_1+l_2+\pi r=l
+	\end{align}
+	
+	由(1)(2)(3)(4)(5)(6)解得
+	$$a=\frac{2mgs}{m'l+2ml}$$
+	\sol{3-5}
+	\subsubsection*{(1)}
+	转动定律
+	$$mg\frac{l}{2}\cos45^\circ{}=\frac{1}{3}ml^2\beta$$
+	
+	解得
+	$$\beta=\frac{3\sqrt{2}g}{4l}=5.197\ \mathrm{rad\cdot s^{-2}}$$
+	\subsubsection*{(2)}
+	机械能守恒
+	$$mg\frac{l}{2}\sin45^\circ{}=\frac{1}{2}\left(\frac{1}{3}ml^2\right)\omega^2$$
+	
+	得下落至水平时的角速度
+	$$\omega=\sqrt{\frac{3\sqrt{2}g}{2l}}=3.224\ \mathrm{rad\cdot s^{-1}}$$
+	\sol{3-7}
+	\subsection*{(1)}
+	记$\omega_A=3\pi\ \mathrm{rad\cdot s^{-1}}$. 角动量守恒
+	$$\omega_AJ_A=\omega\left(J_A+J_B\right)$$
+	
+	解得$\omega=\pi\ \mathrm{rad\cdot s^{-1}}$.
+	\subsection*{(2)}
+	两轮各受冲量矩
+	\begin{align*}
+		&\Delta L_A=\omega J_A-\omega_A J_A=-2\pi\ \mathrm{kg\cdot m^2\cdot s^{-1}}\\
+		&\Delta L_B=\omega J_B-0=2\pi\ \mathrm{kg\cdot m^2\cdot s^{-1}}
+	\end{align*}
+	\sol{3-8}
+	角动量守恒
+	$$\frac{1}{2}m'R^2\omega_0=\left(\frac{1}{2}m'R^2+m(ut)^2\right)\omega$$
+	
+	解得
+	$$\omega=\frac{m'R^2\omega_0}{m'R^2+2mu^2t^2}$$
+	
+	角位移
+	\begin{align*}
+		\Delta\theta&=\int_{0}^{t}\omega\mathrm{d}t\\
+		&=\int_{0}^{t}\frac{m'R^2\omega_0}{m'R^2+2mu^2t^2}\mathrm{d}t\\
+		&=\frac{\omega_0R}{u}\sqrt{\frac{m'}{2m}}\arctan\sqrt{\frac{2m}{m'}}\frac{ut}{R}
+	\end{align*}
+	\sol{3-9}
+	对$O$点角动量守恒
+	$$mv_0d=m\omega d^2+\frac{1}{3}m'L^2\omega$$
+	
+	解得
+	$$\omega=\frac{3mv_0d}{3md^2+m'L^2}$$
+	
+	动量定理
+	
+	$$m\left(v_0-\omega d\right)+I_{Ox}=m'\left(\omega\frac{L}{2}-0\right)$$
+	
+	解得
+	$$I_{Ox}=m'\omega\frac{L}{2}-mv_0+m\omega d=\frac{3mv_0d\left(m'L+md\right)}{6md^2+2m'L^2}$$
+	
+	水平分力
+	$$\bar{F_x}=\frac{I_{Ox}}{\Delta t}=\frac{3mv_0d\left(m'L+md\right)}{2\Delta t\left(3md^2+m'L^2\right)}.$$
+	
+	在打击过程中，杆的角速度逐渐增大，竖直方向受力不断增大，难以用刚体模型求出过程中杆上端受轴的竖直分力.
+	\sol{3-11}
+	杆关于O的转动惯量
+	$$I=\int_{0}^{l}\frac{m_1}{l}\mathrm{d}x\cdot x^2=\frac{1}{3}m_1l^2$$
+	
+	设碰后杆的角速度为$\omega_0$，由角动量守恒定律
+	$$m_2v_1l=\omega_0I-m_2v_2l$$
+	
+	得
+	$$\omega_0=\frac{3m_2}{m_1l}\left(v_1+v_2\right).$$
+	
+	摩擦力对O点的力矩
+	$$M=\int_{0}^{l}\mu\frac{m_1}{l}\mathrm{d}x\cdot g=\frac{\mu m_1gl}{2}.$$
+	
+	由
+	\begin{align*}
+		&M=I\beta\\
+		&\omega_0=\beta t
+	\end{align*}
+
+	得
+	$$t=\frac{\omega_0I}{M}=\frac{2m_2}{\mu m_1g}\left(v_1+v_2\right).$$
+	\sol{3-16}
+	角动量守恒
+	$$mv_0l=\left(\frac{1}{3}m_0l^2+ml^2\right)\omega_0$$
+	
+	得
+	$$\omega_0=\frac{3mv_0}{m_0l+3ml}.$$
+	
+	机械能守恒
+	$$\frac{1}{2}\left(\frac{1}{3}m_0l^2+ml^2\right)\omega_0^2-\frac{1}{2}m_0gl-mgl=0$$
+	
+	解得
+	$$\omega_0^2=\frac{m_0+2m}{2m_0l}g.$$
+	
+	比较得
+	$$v_0=\frac{1}{m}\sqrt{\frac{gl}{3}\left(m_0+2m\right)\left(m_0+3m\right)}.$$
+	\sol{3-18}
+	\noindent
+	\textbf{B点：}
+	
+	角动量守恒
+	$$\omega_0J_0=\omega_B\left(J_0+mR^2\right)$$
+	
+	得
+	$$\omega_B=\frac{\omega_0J_0}{J_0+mR^2}.$$
+	
+	机械能守恒
+	$$\frac{1}{2}J_0\omega_0^2+mgR=\frac{1}{2}J_0\omega_B^2+\frac{1}{2}m\omega_B^2R^2+\frac{1}{2}mv_p^2$$
+	
+	其中$v_p$是小球在竖直方向的分速度（相对于环的速度. 解得
+	$$v_p=\sqrt{\frac{\omega_0^2J_0R^2}{J_0+mR^2}+2gR}.$$
+	
+	\noindent
+	\textbf{C点：}
+	
+	由角动量守恒得
+	$$\omega_C=\omega_0.$$
+	
+	圆环的动能不变. 小球的动能
+	$$\frac{1}{2}mv_h^2=2mgR$$
+	
+	其中$v_h$是小球相对圆环的速度. 解得
+	$$v_h=2\sqrt{gR}.$$
+\end{document}

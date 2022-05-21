@@ -1,0 +1,27 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=b] (0) at (0, 0) {};
+		\node [style=none] (1) at (3, -3) {};
+		\node [style=none] (2) at (1.75, -1.75) {};
+		\node [style=none] (8) at (-0.25, 0.5) {$O$};
+		\node [style=none] (11) at (2.375, -1.925) {};
+		\node [style=none] (12) at (2.575, -2.125) {};
+		\node [style=none] (13) at (3, -1.5) {$\mathrm dl$};
+		\node [style=none] (14) at (-1, 0) {};
+		\node [style=none] (15) at (-1, -0.5) {};
+		\node [style=none] (16) at (-1.2, -0.125) {};
+		\node [style=none] (17) at (-0.8, -0.375) {};
+		\node [style=none] (18) at (-1.2, -0.375) {};
+		\node [style=none] (19) at (-0.8, -0.125) {};
+		\node [style=none] (20) at (-1, -0.9) {$\hat{\mathbf{e_z}}$};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=das] (0) to (2.center);
+		\draw [style=stick] (2.center) to (1.center);
+		\draw [style=leng] (11.center) to (12.center);
+		\draw [style=pla, bend left=270, looseness=1.50] (14.center) to (15.center);
+		\draw [style=pla, bend left=90, looseness=1.50] (14.center) to (15.center);
+		\draw [style=pla] (16.center) to (17.center);
+		\draw [style=pla] (19.center) to (18.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

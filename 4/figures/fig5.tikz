@@ -1,0 +1,83 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=b] (0) at (0, 0) {};
+		\node [style=none] (1) at (3, 0) {};
+		\node [style=none] (2) at (-3, 0) {};
+		\node [style=none] (3) at (1.5, 1.5) {};
+		\node [style=none] (4) at (-1.5, -1.5) {};
+		\node [style=b] (5) at (0, -3) {};
+		\node [style=none] (6) at (1.75, -1.5) {};
+		\node [style=none] (7) at (1.25, -2) {};
+		\node [style=none] (8) at (2.25, -2.25) {};
+		\node [style=none] (9) at (1.675, -1.575) {};
+		\node [style=none] (10) at (1.825, -2.15) {};
+		\node [style=none] (11) at (2.25, -1.5) {$\theta$};
+		\node [style=none] (12) at (2.25, -1) {};
+		\node [style=none] (13) at (-5.5, -5) {};
+		\node [style=none] (14) at (1.75, -5) {};
+		\node [style=none] (15) at (5.5, -1) {};
+		\node [style=none] (16) at (-1.5, -1) {};
+		\node [style=none] (17) at (1.25, -3.25) {};
+		\node [style=none] (18) at (1.75, -3.25) {};
+		\node [style=none] (19) at (1.5, -1.75) {};
+		\node [style=none] (20) at (-1.5, 1.75) {};
+		\node [style=none] (21) at (0, 1.75) {};
+		\node [style=none] (22) at (-0.475, 0.55) {};
+		\node [style=none] (23) at (0, 0.75) {};
+		\node [style=none] (24) at (2.3, -3) {$\mathrm{d}S'$};
+		\node [style=none] (25) at (0.25, -2) {$\mathrm{d}S$};
+		\node [style=none] (26) at (-2, 2) {$\mathrm{d}E$};
+		\node [style=none] (27) at (0, 2.25) {$\mathrm{d}E_y$};
+		\node [style=none] (28) at (3, -3) {};
+		\node [style=none] (29) at (-3, -3) {};
+		\node [style=none] (30) at (1.5, -1.5) {};
+		\node [style=none] (31) at (-1.5, -4.5) {};
+		\node [style=none] (32) at (0.5, 0.25) {$O$};
+		\node [style=none] (33) at (-1.5, 0.4) {$R$};
+		\node [style=none] (34) at (-4, -4.5) {$\Sigma$};
+		\node [style=none] (35) at (-0.25, 1) {$\theta$};
+		\node [style=none] (36) at (-3.325, -0.625) {};
+		\node [style=none] (37) at (-3.325, -3.625) {};
+		\node [style=none] (38) at (3.325, 0.625) {};
+		\node [style=none] (39) at (3.325, -2.375) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=das] (3.center)
+			 to [in=45, out=0, looseness=1.50] (1.center)
+			 to [in=0, out=-135, looseness=0.75] (4.center)
+			 to [in=-135, out=180, looseness=1.50] (2.center)
+			 to [in=180, out=45, looseness=0.75] cycle;
+		\draw [style=das, bend right=45] (2.center) to (5);
+		\draw [style=das, bend right=45] (5) to (1.center);
+		\draw [style=das, in=-135, out=-90, looseness=1.75] (4.center) to (5);
+		\draw [style=das, in=-90, out=45, looseness=0.75] (5) to (3.center);
+		\draw [style=sh] (7.center)
+			 to [bend right=90] (6.center)
+			 to [bend left=270] cycle;
+		\draw [style=das] (7.center) to (8.center);
+		\draw [style=pla, bend left] (9.center) to (10.center);
+		\draw [style=das] (7.center) to (12.center);
+		\draw [style=pla] (13.center) to (14.center);
+		\draw [style=pla] (14.center) to (15.center);
+		\draw [style=pla] (15.center) to (16.center);
+		\draw [style=pla] (16.center) to (13.center);
+		\draw [style=grv] (7.center) to (17.center);
+		\draw [style=grv] (6.center) to (18.center);
+		\draw [style=sh] (18.center)
+			 to [bend left=90, looseness=0.75] (17.center)
+			 to [bend left=90] cycle;
+		\draw [style=grv] (19.center) to (0);
+		\draw [style=fie] (0) to (20.center);
+		\draw [style=fie] (0) to (21.center);
+		\draw [style=fieldvir] (21.center) to (20.center);
+		\draw [style=pla, bend left] (22.center) to (23.center);
+		\draw [style=das] (30.center)
+			 to [in=45, out=0, looseness=1.50] (28.center)
+			 to [in=0, out=-135, looseness=0.75] (31.center)
+			 to [in=-135, out=180, looseness=1.50] (29.center)
+			 to [in=180, out=45, looseness=0.75] cycle;
+		\draw [style=arr] (0) to (2.center);
+		\draw [style=grv] (36.center) to (37.center);
+		\draw [style=grv] (38.center) to (39.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

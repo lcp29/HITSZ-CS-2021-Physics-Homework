@@ -1,0 +1,267 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{tikzit}
+\input{hm.tikzstyles}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+	
+}
+\newcommand{\un}[1]{\ \mathrm{#1}}
+\begin{document}
+
+\section*{第12章}
+\sol{12-1}
+由光速不变原理得固有长度
+$$L_0=c\Delta t.$$
+
+\sol{12-2}
+记某参考系相对飞船系的运动速度为$-u_{r1}$，微流星在某参考系中的速度为$-u_{r2}$. 微流星在飞船系中的速度大小
+$$u=\frac{-u_{r1}-u_{r2}}{1+\frac{u_{r1}u_{r2}}{c^2}}=0.981c.$$
+
+经过飞船所耗时间
+$$t=\frac{l}{u}=1.19\un{\mu s}.$$
+
+\sol{12-5}
+设$S'$相对$S$速度为$v_{r}$，由
+$$\gamma=\frac{1}{\sqrt{1-\frac{v^2}{c^2}}}=\frac{2000\un m}{1000\un m}=2,$$
+
+解得$v_r=\frac{\sqrt{3}}{2}c$.
+
+时间间隔
+\begin{align*}
+\Delta t_{21}&=\frac{t_2-\frac{v_r}{c^2}x_2}{\sqrt{1-\frac{v_r^2}{c^2}}}-\frac{t_1-\frac{v_r}{c^2}x_1}{\sqrt{1-\frac{v_r^2}{c^2}}}\\
+&=\frac{-\Delta x_{21}\frac{v_r}{c^2}}{\sqrt{1-\frac{v_r^2}{c^2}}}
+\end{align*}
+
+代入数值得
+$$\Delta t_{21}=-5.77\un{\mu s}.$$
+
+即从$S'$相对$S$的运动方向来看位置靠前的事件比靠后的的事件早发生$5.77\un{\mu s}$.
+
+\sol{12-7}
+记两系的$A$和$A'$钟位置为各自的原点，两者重合时$t=t'=0$. 设$\Delta x$为从$A$到$B$的有向距离. $A'$钟和$B$钟相遇时$S$系的时间即为$B$钟读数
+$$t_B=\frac{\Delta x}{v}.$$
+
+$S'$系中$A'$钟读数
+\begin{align*}
+t_{A'}&=\frac{t_B-\frac{v}{c^2}\Delta x}{\sqrt{1-\frac{v^2}{c^2}}}\\
+&=\frac{\Delta x}{v}\sqrt{1-\frac{v^2}{c^2}}.
+\end{align*}
+
+\sol{12-8}
+在洛伦兹变换
+$$
+\left\{
+\begin{matrix}
+	x=\gamma(x'+\beta ct')\\
+	ct=\gamma(ct'+\beta x')
+\end{matrix}
+\right.
+$$
+中固定时间$t'$，整理得
+$$ct=\beta x+\frac{c}{\gamma}t'$$
+
+在以$x$为横轴，$ct$为纵轴的坐标系中，在$S'$系中同时发生的两个事件所在直线的斜率为$\beta$.
+$$\beta=c\frac{t_2-t_1}{x_2-x_1}.$$
+
+又从以上洛伦兹变换方程组的第一式得，当$\Delta t'=0$时，
+$$\Delta x=\gamma\Delta x'=\frac{1}{\sqrt{1-\beta^2}}\Delta x'.$$
+
+\begin{align*}
+	\Delta x'&=\sqrt{1-\beta^2}\left(x_2-x_1\right)\\
+	&=\sqrt{1-c^2\frac{(t_2-t_1)^2}{(x_2-x_1)^2}}(x_2-x_1)\\
+	&=\left(\Delta x^2-c^2\Delta t^2\right)^\frac{1}{2}.
+\end{align*}
+
+\sol{12-9}
+火箭发射时，地面上的时间
+$$\Delta t_1=\gamma\Delta t'=12.5\un s.$$
+
+火箭升空的距离
+$$x=v\Delta t_1=12.5\un s\cdot0.6c.$$
+
+导弹落地所用时间
+$$\Delta t_2=\frac{x}{v_1}=25\un s.$$
+
+从火箭发射到导弹到达地球的时间
+$$\Delta t=\Delta t_1+\Delta t_2 = 37.5\un s.$$
+
+\sol{12-10}
+记$\mu$子动能为$E_k=10395\un{MeV}$. 总能量
+\begin{align*}
+	E&=\gamma m_0c^2\\
+	&=m_0c^2+(\gamma-1)m_0c^2\\
+	&=m_0c^2+E_k\\
+	&=10500\un{MeV}.
+\end{align*}
+
+由$E_k=(\gamma-1)m_0c^2$得$\gamma=100$. 解得
+$$v=\frac{3\sqrt{1111}}{100}c=0.99995c.$$
+
+动量
+$$p=\gamma m_0v=1.05\times 10^{4}\un{MeV\cdot c^{-1}}.$$
+
+\sol{12-11}
+由动量守恒，粒子正碰合并后静止，所有能量均转化为静质能. 总能量
+$$E=2\frac{m_0c^2}{\sqrt{1-\frac{v^2}{c^2}}}.$$
+
+由$E=m_0'c^2$得
+$$m_0'=\frac{2m_0}{\sqrt{1-\frac{v^2}{c^2}}}.$$
+
+\sol{12-13}
+\subsection*{(1)}
+电子的总能量
+$$E=\frac{m_ec^2}{\sqrt{1-\frac{v^2}{c^2}}}=5.81\times10^{-13}\un J.$$
+\subsection*{(2)}
+电子的经典力学动能与相对论动能之比
+$$\frac{E_{k0}}{E_k}=\frac{\frac{1}{2}m_0v^2}{(\gamma-1)m_0c^2}=\frac{v^2}{2(\gamma-1)c^2}=0.08.$$
+
+\sol{12-16}
+记$E_{kB}=6m_0c^2$，复合质点为$C$. 由相对论能量与动量的关系
+$$\left(E_{kB}+m_0c^2\right)^2=p_B^2c^2+m_0^2c^4,$$
+
+动量守恒
+$$p_B=p_C,$$
+
+其中
+$$p_C=\frac{m_Cv_C}{\sqrt{1-\frac{v_C^2}{c^2}}},$$
+
+能量守恒
+$$E_{kB}+m_0c^2+m_0c^2=\frac{m_Cc^2}{\sqrt{1-\frac{v_C^2}{c^2}}}$$
+
+解得$m_C=4m_0$.
+
+\section*{第13章}
+\sol{13-2}
+由
+$$\lambda_1T_1=b,$$
+$$\lambda_2T_2=b,$$
+$$E_1=\sigma T_1^4,$$
+$$E_2=\sigma T_2^4$$
+
+得总辐射出射度变为原来的$\frac{E_2}{E_1}=\frac{\lambda_1^4}{\lambda_2^4}=3.63$倍.
+
+\sol{13-3}
+\subsection*{(1)}
+设金属的逸出功为$A$，由光电效应方程
+$$h\nu=\frac{1}{2}mv_m^2+A,$$
+
+遏止电压$U_e$满足$eU_e=\frac{1}{2}mv_m^2$得
+\begin{equation}
+	U_e=\frac{h}{e}\nu-\frac{A}{e}.
+\end{equation}
+
+
+故$AB$线斜率$k=\frac{h}{e}$，与金属材料无关.
+\subsection*{(2)}
+由图得斜率$K=\frac{2\un V}{5.0\times10^{14}\un {Hz}}=4\times10^{-15}\un{V/Hz}$. 由(1)式得$h=eK=6.4\times10^{-34}\un{J\cdot s}$.
+
+\sol{13-5}
+正确的有(2)和(4).
+
+\sol{13-8}
+\subsection*{(1)}
+散射前光的波长
+$$\lambda_0=\frac{hc}{\varepsilon}=124.3\un{pm}.$$
+
+散射过程中波长的变化量
+$$\Delta\lambda=\frac{h}{m_ec}(1-\cos60^\circ)=1.2\un{pm}.$$
+
+碰撞后散射光的波长$\lambda=\lambda_0+\Delta\lambda=125.5\un{pm}$.
+
+\subsection*{(2)}
+由能量守恒
+$$\frac{hc}{\lambda_0}=\frac{hc}{\lambda}+E_{ke}$$
+
+解得$E_{ke}=1.53\times10^{-17}\un J$.
+
+\sol{13-9}
+记$\varepsilon=0.5\un{MeV}$，$E_e=0.1\un{MeV}$. 由
+\begin{align*}
+	&\lambda_0=\frac{hc}{\varepsilon}\\
+	&hc\left(\frac{1}{\lambda_0}-\frac{1}{\lambda}\right)=E_e\\
+	&\lambda=\lambda_0+\Delta\lambda
+\end{align*}
+
+由上式整理得
+$$\frac{\Delta\lambda}{\lambda}=\frac{\Delta\lambda}{\Delta\lambda+\lambda_0}=\frac{E_e}{\varepsilon}=\frac{1}{5}.$$
+
+故
+$$\frac{\Delta\lambda}{\lambda_0}=\frac{1}{4}.$$
+
+\sol{13-10}
+记$\lambda_0=3\un{pm}$，$E_{ke}=(\gamma-1)m_ec^2=\frac{1}{4}m_ec^2$.
+由能量守恒
+$$\frac{hc}{\lambda_0}=\frac{hc}{\lambda}+E_{ke}.$$
+
+解得$\lambda=4.34\un{pm}$，则$\Delta\lambda=1.34\un{pm}$.
+
+设散射角为$\varphi$，由
+$$\Delta\lambda=\frac{h}{m_ec}(1-\cos\varphi)$$
+
+得$\varphi=63^\circ{}$.
+
+\sol{13-16}
+电子的动量
+$$p_e=h/\lambda_e=3.32\times10^{-24}\un{kg\cdot m\cdot s^{-1}},$$
+
+总能量$E_e=\sqrt{p_e^2c^2+m_e^2c^4}=8.20\times10^{-14}\un J$. 动能
+$$E_{ke}=E_e-m_ec^2=6.03\times10^{-18}\un J.$$
+
+光子的动量
+$$p_p=h/\lambda_p=3.32\times10^{-24}\un{kg\cdot m\cdot s^{-1}},$$
+
+动能
+$$E_{kp}=p_pc=9.95\times10^{-16}\un J.$$
+
+\sol{13-18}
+粒子的动量
+$$p=\frac{h}{\lambda}=3.32\times10^{-22}\un{kg\cdot m\cdot s^{-1}}.$$
+
+记$U=206\un V$. 由
+$$eU=\frac{1}{2}mv^2$$
+
+和
+$$\frac{1}{2}mv^2=\frac{p^2}{2m}$$
+
+解得$m=\frac{h^2}{2eU\lambda^2}$.
+
+代入数值得粒子的静质量$m_0=1.67\times10^{-33}\un{kg}$.
+
+\sol{13-21}
+\subsection*{(1)}
+动量的不确定度
+$$\Delta p_e=m_e\Delta v=9.1\times10^{-33}\un{kg\cdot m\cdot s^{-1}}.$$
+
+坐标的不确定度
+$$\Delta x_e=\frac{h}{\Delta p_e}=0.072\un m.$$
+
+\subsection*{(2)}
+同(1)得
+$$\Delta x_2=\frac{h}{m_3\Delta v}=6.63\times10^{-19}\un m.$$
+
+\subsection*{(3)}
+同(1)得
+$$\Delta x_3=\frac{h}{m_3\Delta v}=6.63\times10^{-28}\un m.$$
+
+\sol{13-23}
+$$\left|\Psi(x)\right|^2=\frac{2}{a}\sin^2\left(\frac{2\pi}{a}x\right).$$
+
+联系$a$的范围可以知道，当$x$取$a/4$及$3a/4$时，$\left|\Psi(x)\right|^2$最大，粒子被发现的概率最大.
+
+\sol{13-24}
+$$\left|\Psi(x)\right|^2=c^2x^2(l-x)^2,0\leq x\leq l,$$
+
+归一化
+$$\int_{-\infty}^{+\infty}\left|\Psi(x)\right|^2\mathrm dx=\int_0^l\left|\Psi(x)\right|^2\mathrm dx=1,$$
+
+解得
+$$c^2=\frac{30}{l^5}.$$
+
+在$[0,l/3]$发现粒子的概率
+$$\int_0^{\frac{l}{3}}\left|\Psi(x)\right|^2\mathrm dx=\frac{17}{81}=0.21.$$
+
+\end{document}

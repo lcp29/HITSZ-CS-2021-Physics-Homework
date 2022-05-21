@@ -1,0 +1,318 @@
+\documentclass[twocolumn]{ctexart}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{tikzit}
+\input{hm.tikzstyles}
+\geometry{a4paper, scale=0.8}
+\newcommand{\sol}[1]{\subsection*{#1}\noindent\textbf{解：}
+	
+}
+\newcommand{\un}[1]{\ \mathrm{#1}}
+\begin{document}
+\section*{第9章}
+	
+\sol{9-1}
+对振动表达式求导得
+$$v=-3A\pi\sin\left(3\pi t+\varphi\right).$$
+
+在上式和振动表达式中分别代入$t=0$，$x_0=0.06\ \mathrm m$，$v_0=-0.24\ \mathrm m\cdot\mathrm s^{-1}$得
+\begin{align}
+	&0.06\ \mathrm m=A\cos\varphi,\\
+	&-0.24\ \mathrm m\cdot\mathrm s^{-1}=-3A\pi\sin\varphi.
+\end{align}
+
+由(1)(2)式取合理解得
+\begin{align*}
+	&A=6.5\times10^{-2}\ \mathrm m,\\
+	&\varphi=\arctan\frac{4}{3\pi}=23^\circ{}.
+\end{align*}
+
+\sol{9-2}
+由题意，$v_0=-0.03\ \mathrm{m\cdot s^{-1}}<0$，$x_0=0$，振动方程
+$$x=0.02\cos\left(\omega t+\frac{\pi}{2}\right)\ \mathrm m,$$
+
+而
+$$\omega=\frac{v_0}{A}=\frac{3}{2},$$
+
+振动表达式
+$$x=0.02\cos\left(\frac{3}{2}t+\frac{\pi}{2}\right)\ \mathrm m.$$
+
+\sol{9-3}
+\subsection*{(1)}
+由题意得角频率
+$$\omega=\frac{2\pi}{T}=\frac{2\pi}{3}\ \mathrm{rad\cdot s^{-1}}.$$
+
+振动表达式
+$$x=4.8\times10^{-2}\cos\frac{2\pi t}{3}\ \mathrm m.$$
+
+代入$t=0.5\ \mathrm s$得$x|_{t=0.5\ \mathrm s}=0.024\ \mathrm m$. 由$F=-m\omega^2x$得
+$$F|_{t=0.5\ \mathrm s}=-1.05\times10^{-3}\ \mathrm N,$$
+其中负号表示沿$-x$方向.
+
+\subsection*{(2)}
+将$x=2.4\times10^{-2}\ \mathrm m$代入振动表达式，整理得
+$$\cos\frac{2\pi t}{3}=\frac{1}{2}.$$
+
+解得
+$$t=\frac{1}{2}\ \mathrm s,\frac{5}{2}\ \mathrm s,\cdots,3k+\frac{1}{2}\ \mathrm s,3k-\frac{1}{2}\ \mathrm s,\cdots.$$
+
+取最小解
+$$t=0.5\ \mathrm s$$
+
+即为所需的最短时间.
+
+\sol{9-4}
+由图得振动的幅值$A=10\ \mathrm m$.设振动表达式
+$$x=10\cos\left(\omega t+\varphi\right)\ \mathrm m.$$
+
+使用旋转矢量法，图中$t=0$到$t=1\ \mathrm s$的时间内相位变化为$5\pi/6$，即$5/12$个周期，由此得周期$T=12/5\ \mathrm s$，角频率$\omega=2\pi/T=5\pi/6\ \mathrm{rad\cdot s^{-1}}$.由图易得初相位$\varphi=2\pi/3$，综上，振动表达式为
+$$x=10\cos\left(\frac{5\pi}{6} t+\frac{2\pi}{3}\right)\ \mathrm m.$$
+
+\sol{9-5}
+\ctikzfig{fig1}
+
+设物体质量为$m$，由牛顿第二定律
+$$mg\sin\theta=-mr\ddot\theta,$$
+
+取小角近似得
+$$mg\theta=-mr\ddot\theta,$$
+
+即$$\ddot\theta=-\frac{g}{r}\theta.$$
+
+故物体所做的运动是简谐振动，角频率$\omega=\sqrt\frac{g}{r}$，周期
+$$T=\frac{2\pi}{\omega}=2\pi\sqrt\frac{r}{g}.$$
+
+\sol{9-6}
+\subsection*{(1)}
+忽略水面高度的变化，设木块质量为$m=\rho l^3$，水的密度为$\rho_w$.
+\ctikzfig{fig2}
+
+设下沉深度为$x$时木块受到的浮力为$\mathbf F$，重力为$m\mathbf g$. 已知$x=0$时$F=mg$，故$F=mg+\rho_w gl^2x$，由牛顿第二定律，$mg-F=m\ddot x$，即
+\setcounter{equation}{0}
+\begin{align}\ddot x=-\frac{\rho_w gl^2}{m}x.\end{align}
+
+故木块所做的运动是简谐振动.
+\subsection*{(2)}
+木块在初始位置的$x=b-a$，速度大小为$0$，故振幅
+$$A=b-a.$$
+
+由(1)得木块运动的角频率$\omega=\sqrt\frac{\rho gl^2}{m}=\sqrt\frac{\rho_wg}{\rho l}$，周期
+$$T=\frac{2\pi}{\omega}=2\pi\sqrt\frac{\rho l}{\rho_w g}.$$
+
+\sol{9-8}
+\ctikzfig{fig3}
+
+由对称性得圆环对电荷施加的力
+\begin{align*}
+	F&=-\oint_R\frac{q\sin\theta\mathrm dQ}{4\pi\epsilon_0\left(x^2+R^2\right)}\\
+	&=-\frac{Qqx}{4\pi\epsilon_0 \left(x^2+R^2\right)^\frac{3}{2}}.
+\end{align*}
+
+在环心附近有
+\begin{align*}
+	F&=-\frac{Qqx}{4\pi\epsilon_0 \left(x^2+R^2\right)^\frac{3}{2}}\\
+	&=-\frac{Qqx}{4\pi\epsilon_0R^3}\left(1+\frac{x^2}{R^2}\right)^{-\frac{3}{2}}\\
+	&\approx-\frac{Qq}{4\pi\epsilon_0R^3}x.
+\end{align*}
+
+由牛顿第二定律整理得
+$$\ddot x=-\frac{Qq}{4\pi\epsilon_0mR^3}x.$$
+
+故带电粒子所作小振动为简谐振动，角频率
+$$\omega=\sqrt\frac{Qq}{4\pi\epsilon_0mR^3},$$
+
+周期
+$$T=\frac{2\pi}{\omega}=2\pi\sqrt\frac{4\pi\epsilon_0mR^3}{Qq}.$$
+
+\sol{9-10}
+\subsection*{(1)}
+弹簧振子的能量$E=0.8\ \mathrm J$. 由$E=kA^2/2$得
+$$A=0.253\ \mathrm m.$$
+
+\subsection*{(2)}
+系统的势能
+$$E_p=\frac{1}{2}k\left(\pm\frac{A}{2}\right)^2=0.2\ \mathrm J.$$
+
+动能
+$$E_k=E-E_p=0.6\ \mathrm J.$$
+
+\subsection*{(3)}
+设振子经过平衡位置时的速度为$v_0$，由$E=mv_0^2/2$得
+$$v_0=2.530\ \mathrm{m\cdot s^{-1}}.$$
+
+\sol{9-12}
+\setcounter{equation}{0}
+\subsection*{(1)}
+由振动表达式得角频率$\omega=\pi/3$，振幅$A=6\times10^{-2}\ \mathrm m$.
+
+动能等于势能
+\begin{align}
+	\frac{1}{2}mv^2=\frac{1}{2}kx^2
+\end{align}
+
+又
+\begin{align}
+	&\omega^2=\frac{k}{m}\\
+	&A^2=x^2+\frac{v^2}{\omega^2}
+\end{align}
+
+由(1)(2)(3)解得
+$$x=\pm\frac{\sqrt{2}}{2}A,$$
+
+代入数值得$x=\pm4.24\times10^{-2}\ \mathrm m$.
+
+\subsection*{(2)}
+\ctikzfig{fig4}
+
+由旋转矢量法，质点从平衡位置移动到此位置所需要的最短时间
+$$t=\frac{\theta}{\omega}=\frac{3}{4}\ \mathrm s.$$
+
+
+\sol{9-14}
+\ctikzfig{fig5}
+\subsection*{(1)}
+由振幅矢量法，和振动的振幅
+$$A=\sqrt{3^2+4^2}\ \mathrm m=5\ \mathrm m.$$
+
+初相
+$$\varphi=\frac{\pi}{3}-\arctan\frac{3}{4}=23.1^\circ{}.$$
+
+\subsection*{(2)}
+当$x_1$和$x_3$的复振幅矢量同向，即
+$$\varphi=\frac{\pi}{3}$$
+时，$x_1$与$x_3$的合振幅为最大.
+
+当$x_2$和$x_3$的复振幅矢量反向，即
+$$\varphi=\frac{5\pi}{6}$$
+时，$x_2$与$x_3$的合振幅为最小.
+
+\section*{第10章}
+
+\sol{10-4}
+\subsection*{(1)}
+由振动表达式得频率$\nu=\omega/(2\pi)=1/4\un{s^{-1}}$，波长$\lambda=u/\nu=8\un{m\cdot s}$.
+
+设单位长度内波的相位变化
+$$k=\frac{2\pi}{\lambda}=\frac{\pi}{4}\un{m^{-1}}.$$
+
+距原点$5\un m$处的质元的振动表达式为
+\begin{align*}
+	y_1&=6.0\times10^{-2}\sin\left(\frac{\pi}{2}t-k\cdot 5\un m\right)\un m\\
+	&=6.0\times10^{-2}\sin\left(\frac{\pi}{2}t-\frac{5\pi}{4}\right)\un m.
+\end{align*}
+
+化为余弦形式：
+$$y_1=6.0\times10^{-2}\cos\left(\frac{\pi}{2}t-\frac{7\pi}{4}\right)\un m.$$
+\subsection*{(2)}
+由(1)得相位差
+$$\Delta\varphi=-\frac{5\pi}{4}.$$
+
+\sol{10-5}
+\subsection*{(1)}
+由波形图得$a$，$b$，$c$点的运动方向分别为为$+y$，$+y$，$-y$.
+
+\subsection*{(2)}
+由波形图得波长$\lambda=0.4\un m$，周期$T=\lambda/u=8\un s$，振幅$A=0.1\un{cm}$，角频率$\omega=2\pi/T=\pi/4\un{s^{-1}}$，初相位$\varphi_0=0$. 波动表达式为
+\begin{align*}
+	y&=A\cos\left(\omega t-\frac{2\pi}{\lambda}x+\varphi_0\right)\\
+	&=0.1\cos\left(\frac{\pi}{4}t-5\pi x\right)\un{cm}.
+\end{align*}
+
+\subsection*{(3)}
+在波动表达式中代入$x=0.3\un m$，得
+$$y=0.1\cos\left(\frac{\pi}{4}t-\frac{3\pi}{2}\right)\un{cm}.$$
+
+\sol{10-6}
+\subsection*{(1)}
+波动表达式
+\begin{align*}
+	y_A&=3\cos\left(4\pi t-\frac{\omega}{u}x+\frac{\pi}{2}\right)\un m\\
+	&=3\cos\left(4\pi t-\frac{\pi}{6}x+\frac{\pi}{2}\right)\un m.
+\end{align*}
+
+\subsection*{(2)}
+以$B$为原点，则波动表达式为
+\begin{align*}
+	y_B&=y_A(x-6\un m,t)\\
+	&=3\cos\left(4\pi t-\frac{\pi}{6}x-\frac{\pi}{2}\right)\un m.
+\end{align*}
+
+\sol{10-7}
+由题意，振幅$A=3\un{cm}$，波长$\lambda=20\un{cm}=0.2\un{m}$，波速$u=\nu\lambda=5\un{m\cdot s^{-1}}$，$x=0$处的初相位$\varphi_0=-\pi/2$. 该纵波的波函数为
+\begin{align*}
+	y&=A\cos\left(2\pi\nu t-\frac{2\pi}{\lambda}x+\varphi_0\right)\\
+	&=0.03\cos\left(50\pi t-10\pi x-\frac{\pi}{2}\right)\un{m}.
+\end{align*}
+
+\sol{10-8}
+\subsection*{(1)}
+由波形图得波长$\lambda=0.6\un m$，振幅$A=0.2\un m$， 在$0.25\un s$内平面简谐波向前传播的距离为$\Delta x=\left(k+1/4\right)\lambda, k=0,1,2,...$. 波速
+$$u=\frac{\Delta x}{t_2-t_1}=0.6(4k+1)\un{m\cdot s^{-1}},k=0,1,2,\cdots,$$
+
+质元的振动频率
+$$\nu=\frac{u}{\lambda}=(4k+1)\un{s^{-1}},k=0,1,2,\cdots.$$
+
+$t=0$时$P$点位于平衡位置且正在向$+y$方向运动，$P$点的初相位$\varphi_{P0}=-\pi/2$. $P$点的振动表达式为
+$$y_P=0.2\cos\left[2\pi(4k+1)t-\frac{\pi}{2}\right]\un m,k=0,1,2,\cdots.$$
+
+特别地，当$k=0$时，有
+$$y_P=0.2\cos\left(2\pi t-\frac{\pi}{2}\right)\un m.$$
+
+\subsection*{(2)}
+由波形图得原点的初相位$\varphi_{O0}=\pi/2$. 角波数$k=2\pi/\lambda=10\pi/3\un{s^{-1}}$. 波动表达式为
+$$y=0.2\cos\left[2\pi(4k+1)t-\frac{10\pi}{3}x+\frac{\pi}{2}\right]\un m,k=0,1,2,\cdots.$$
+
+特别地，当$k=0$时，波动表达式为
+$$y=0.2\cos\left(2\pi t-\frac{10\pi}{3}x+\frac{\pi}{2}\right)\un m.$$
+
+\subsection*{(3)}
+将$x=0$代入波动表达式得原点$O$的振动表达式
+$$y_O=0.2\cos\left[2\pi(4k+1)t+\frac{\pi}{2}\right]\un m,k=0,1,2,\cdots,$$
+
+当$k=0$时为
+$$y_O=0.2\cos\left(2\pi t+\frac{\pi}{2}\right)\un m.$$
+
+此时原点的振动曲线如下.
+\ctikzfig{fig6}
+
+\sol{10-10}
+设$S_1$初相位$\varphi_{S_1}=\pi/2$，$S_2$初相位$\varphi_{S_2}=0$.
+
+$t=0$时，$S_1$，$S_2$发出的波在$P$点的相位为
+$$\varphi_{S_1P}=\varphi_{S_1}=\frac{\pi}{2}-\frac{2\pi\nu_1}{u_1}r_1=-\frac{3\pi}{2},$$
+$$\varphi_{S_2P}=\varphi_{S_2}=0-\frac{2\pi\nu_2}{u_2}r_2=-\frac{3\pi}{2}.$$
+
+相位差
+$$\Delta\varphi=\varphi_{S_1P}-\varphi_{S_2P}=0.$$
+
+故两列波在$P$点干涉相长，合振幅$A=\sqrt{A_1^2+A_2^2+2A_1A_2\cos\Delta\varphi}=0.02\un m$.
+
+\sol{10-11}
+以$A$为原点，$\overrightarrow{AB}$为正方向. 设$A$的初相为$0$，$B$的初相为$\pi$. 两列波的角波数均为$k=2\pi\nu/u=\pi/2\un{m^{-1}}$. $A$，$B$点发出的波在线段$AB$上的相位分别为
+$$\varphi_A=-kx=-\frac{\pi}{2}\un{m^{-1}}\cdot x,$$
+$$\varphi_B=-k(30\un m-x)=-\frac{\pi}{2}\un{m^{-1}}\cdot(30\un m-x)+\pi.$$
+
+波节处两者完全干涉相消，
+$$\Delta\varphi=\varphi_A-\varphi_B=2k\pi+\pi,k=0,\pm1,\pm2,\cdots.$$
+
+解得$x=2k+1\un{(m)},k=0,1,2,\cdots,14$.
+
+\sol{10-13}
+由题意，反射波向$+x$方向传播，故入射波在$+x$区域反向传播.
+
+入射波的方程
+$$y_0=0.15\cos\left[100\pi\left(t+\frac{x}{200}\right)+\frac{\pi}{2}\right]\un m.$$
+
+合成波的表达式
+\begin{align*}
+	y_t&=y+y_0\\
+	&=0.15\cos\left[100\pi\left(t-\frac{x}{200}\right)+\frac{\pi}{2}\right]\un m\\
+	&+0.15\cos\left[100\pi\left(t+\frac{x}{200}\right)+\frac{\pi}{2}\right]\un m\\
+	&=0.3\cos\left(100\pi t+\frac{\pi}{2}\right)\cos\frac{\pi}{2}x\un m.
+\end{align*}
+
+合成波是驻波.
+
+\end{document}

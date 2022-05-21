@@ -1,0 +1,52 @@
+\begin{tikzpicture}
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (-4, 0) {};
+		\node [style=none] (1) at (4, 0) {};
+		\node [style=none] (2) at (-4, 0) {};
+		\node [style=none] (3) at (4, 0) {};
+		\node [style=none] (4) at (-4, -4) {};
+		\node [style=none] (5) at (4, -4) {};
+		\node [style=none] (6) at (-2, 1.5) {};
+		\node [style=none] (7) at (-2, -2.5) {};
+		\node [style=none] (8) at (2, -2.5) {};
+		\node [style=none] (9) at (2, 1.5) {};
+		\node [style=none] (10) at (-2, 0) {};
+		\node [style=none] (11) at (2, 0) {};
+		\node [style=none] (12) at (2.25, -0.5) {};
+		\node [style=none] (13) at (2.25, 0) {};
+		\node [style=none] (14) at (2.275, 0.375) {$x$};
+		\node [style=none] (15) at (-2, -0.5) {};
+		\node [style=none] (16) at (2, -0.5) {};
+		\node [style=none] (17) at (0, -0.5) {};
+		\node [style=none] (18) at (0, 3) {};
+		\node [style=none] (19) at (0, -2.25) {};
+		\node [style=none] (20) at (0.5, 3) {$\mathbf{F}$};
+		\node [style=none] (21) at (0.75, -2) {$m\mathbf{g}$};
+		\node [style=none] (22) at (-2.5, 0) {};
+		\node [style=none] (23) at (-2.5, -3.5) {};
+		\node [style=none] (24) at (-3, -3.5) {$x$};
+		\node [style=none] (25) at (-2.5, 0.5) {O};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw [style=water] (3.center)
+			 to (2.center)
+			 to (4.center)
+			 to (5.center)
+			 to cycle;
+		\draw [style=wood] (7.center)
+			 to (10.center)
+			 to (6.center)
+			 to (9.center)
+			 to (11.center)
+			 to (8.center)
+			 to cycle;
+		\draw [style=pla] (0.center) to (10.center);
+		\draw [style=pla] (11.center) to (1.center);
+		\draw [style=leng] (12.center) to (13.center);
+		\draw [style=das] (16.center) to (15.center);
+		\draw [style=das] (10.center) to (11.center);
+		\draw [style=force] (17.center) to (18.center);
+		\draw [style=force] (17.center) to (19.center);
+		\draw [style=axis] (22.center) to (23.center);
+	\end{pgfonlayer}
+\end{tikzpicture}
